@@ -1,1 +1,0 @@
-# ElderlyCareSupport.Client

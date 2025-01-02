@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\Assets\\elder-group-friends-partying.jpg",
+      "PackagePath": "staticwebassets\\Assets\\elder-group-friends-partying.jpg"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\css\\homePage.css",
+      "PackagePath": "staticwebassets\\css\\homePage.css"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\css\\sweetalert.css",
+      "PackagePath": "staticwebassets\\css\\sweetalert.css"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "D:\\ElderlyCareSupport.Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ElderlyCareSupport.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ElderlyCareSupport.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.ElderlyCareSupport.Client.props",
+      "PackagePath": "build\\ElderlyCareSupport.Client.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ElderlyCareSupport.Client.props",
+      "PackagePath": "buildMultiTargeting\\ElderlyCareSupport.Client.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.ElderlyCareSupport.Client.props",
+      "PackagePath": "buildTransitive\\ElderlyCareSupport.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
