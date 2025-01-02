@@ -1,0 +1,65 @@
+﻿@page "/"
+@using ElderlyCareSupport.Client.Components
+
+<html lang="en">
+<head>
+    <title>ElderCareAccount</title>
+</head>
+<body>
+<MudAppBar Color="Color.Transparent" Fixed="false" Class=" d-flex space-between home-app-bar">
+    <h2 class="home-heading">Elderly Care Support</h2>
+    <MudSpacer/>
+    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="HandleLogin" id="login-button">Login</MudButton>
+</MudAppBar>
+
+<div class="home-image-container">
+    <div class="overlay-container">
+    </div>
+    <div class="text-container">
+        <h1>Welcome to ElderCareSupport Services</h1>
+        <h2>We can leverage the boundary to serve the Needy people</h2>
+        <p>Empowering lives, one compassionate step at a time. Join us in making a difference for those who need it most.</p>
+    </div>
+    <img class="home-image" src="Assets/elder-group-friends-partying.jpg" width="100%" alt="ElderCareImage" loading="eager"/>
+</div>
+<hr/>
+
+<div class="fee-section">
+    <h3>Our Service Details</h3>
+    <MudGrid Class="fee-container" Spacing="10">
+        @foreach (var fee in _feeDetails)
+        {
+            if (!_feeDetails.Any())
+            {
+                <MudText Color="Color.Info" Align="Align.Center">Can't Fetch fee details</MudText>
+            }
+            else
+            {
+                <MudItem xs="12" sm="3" lg="3">
+                    <MudCard Id="@($"card-{fee.FeeId}")" Class="mud-width-full glitter-gradient" Outlined="true" Style="box-sizing: border-box; max-height: 50vh;">
+                        <MudCardMedia Image="/Assets/elder-group-friends-partying.jpg" Height="200"/>
+                        <MudCardContent>
+                            <MudText Typo="Typo.h6" Style="text-overflow: ellipsis; text-wrap: balance">@fee.FeeName</MudText>
+                            <MudText Typo="Typo.body2">@fee.FeeAmount &#8377;</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Description</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+            }
+        }
+    </MudGrid>
+</div>
+
+<footer class="footer-div">
+    <div class="footer-content">
+        <p>
+            <b>Contact us:</b> <span>elderlysupport@eldercare.com</span>
+        </p>
+    </div>
+    ElderCareSupport &copy; copyright. All rights reserved
+</footer>
+
+</body>
+</html>
