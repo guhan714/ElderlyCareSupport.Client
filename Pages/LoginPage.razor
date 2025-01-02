@@ -1,0 +1,82 @@
+﻿@page "/LoginPage"
+@using ElderlyCareSupport.Client.Models
+@inject IDialogService DialogService
+
+
+<MudGrid Class="d-flex justify-center align-items-center vh-100 mt-20 login-container">
+    <MudItem xs="12" sm="8" md="4">
+        <MudCard Class="shadow-lg rounded-lg" Style="background-color: white">
+            <MudCardHeader>
+                <MudText Typo="Typo.h5" Color="Color.Primary" Class="font-weight-bold">
+                    Elderly CareSupport Login
+                </MudText>
+            </MudCardHeader>
+            <MudCardContent Class="p-4">
+                <MudForm @ref="loginForm" @onsubmit="HandleLoginAsync">
+                    <MudTextField
+                        T="string"
+                        Label="Email"
+                        @bind-Value="email"
+                        Variant="Variant.Outlined"
+                        For="@(() => email)"
+                        Required="true"
+                        Immediate="true"
+                        FullWidth="true"
+                        Adornment="Adornment.Start"
+                        AdornmentIcon="@Icons.Material.Filled.Email"
+                        Class="mb-3">
+                    </MudTextField>
+
+                    <MudTextField
+                        T="string"
+                        Label="Password"
+                        @bind-Value="password"
+                        InputType="InputType.Password"
+                        Variant="Variant.Outlined"
+                        For="@(() => password)"
+                        Required="true"
+                        Immediate="true"
+                        FullWidth="true"
+                        Adornment="Adornment.Start"
+                        AdornmentIcon="@Icons.Material.Filled.Lock"
+                        Class="mb-3">
+                    </MudTextField>
+                    <MudStack>
+                        <MudSelect
+                            Label="User Type"
+                            @bind-Value="_userType"
+                            Variant="Variant.Outlined"
+                            Required="true"
+                            FullWidth="true"
+                            Adornment="Adornment.Start"
+                            AdornmentIcon="@Icons.Material.Filled.Person"
+                            Class="mb-4">
+                            @foreach (UserType user in Enum.GetValues(typeof(UserType)))
+                            {
+                                <MudSelectItem Value="@user">@user</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudStack>
+                    <MudText Color="Color.Error">@ValidationMessage</MudText>
+
+                    <MudCardActions Class="d-flex justify-around">
+                        <MudButton
+                            ButtonType="ButtonType.Submit"
+                            Variant="Variant.Filled"
+                            Color="Color.Primary"
+                            StartIcon="@Icons.Material.Filled.Login"
+                            Class="px-4"
+                            FullWidth="true">
+                            Login
+                        </MudButton>
+                    </MudCardActions>
+                </MudForm>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+
+}
